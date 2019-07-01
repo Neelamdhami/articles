@@ -1,0 +1,27 @@
+<h1>product_table</h1>
+<table>
+  <tr>
+    <th>product_name</th>
+    <th>description</th>
+    <th>start_date</th>
+    <th>end_time</th>
+    <th>quantity</th>
+    <th colspan="3"></th>
+  </tr>
+ 
+  <% @products.each do |product| %>
+    <tr>
+      <td><%= product.product_name %></td>
+      <td><%= product.description %></td>
+      <td><%= product.start_date %></td>
+      <td><%= product.end_time %></td>
+      <td><%= product.quantity %></td>
+      <td><%= link_to 'Show', product_path(product) %></td>
+      <td><%= link_to 'Edit', edit_product_path(product) %></td>
+      <td><%= link_to 'Destroy', delete_destroy_path(product),
+              data: { confirm: 'Are you sure?' } %></td>
+
+
+       </tr>
+  <% end %>
+</table>

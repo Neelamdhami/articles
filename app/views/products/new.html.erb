@@ -1,0 +1,28 @@
+<h1> new product </h1>
+<%= form_with scope: :product, url: '/products', local: true do |form| %>
+<table>
+<tr>
+	<td><%= form.label :product_name %></td>
+    <td><%= form.text_field :product_name %></td>
+ </tr>
+ <tr>
+	<td><%= form.label :description %></td>
+    <td><%= form.text_field :description %></td>
+ </tr>
+ <tr>
+	<td><%= form.label :start_date %></td>
+    <td><%= form.text_field :start_date %></td>
+ </tr>
+ <tr>
+	<td><%= form.label :end_time %></td>
+    <td><%= form.text_field :end_time %></td>
+ </tr>
+ <tr>
+	<td><%= form.label :quantity %></td>
+    <td><%= form.text_field :quantity %></td>
+ </tr>
+ <tr>
+ 	<td><%= form.submit %></td>
+  </tr>
+</table>
+<% end %>
